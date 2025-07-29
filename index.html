@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoalTrack - Scanner de Futebol Virtual</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>GoalTrack</h1>
+    <button onclick="login()">Login</button>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Seu scanner avançado de Futebol Virtual</h2>
+      <p>Over, Under, BTTS e muito mais</p>
+      <div class="buttons">
+        <button onclick="start()">Comece analisar agora</button>
+        <button onclick="alert('Alertas em breve')">Configurar alertas</button>
+      </div>
+    </section>
+
+    <section class="filtros">
+      <label>
+        Liga:
+        <select id="liga">
+          <option>World Cup</option>
+          <option>Euro</option>
+          <option>Premier League</option>
+          <option>Sul-Americana</option>
+        </select>
+      </label>
+      <label>
+        Tipo de Análise:
+        <select id="tipo">
+          <option>Over 2.5 gols</option>
+          <option>Under 2.5 gols</option>
+          <option>Ambos Marcam</option>
+          <option>Resultado Final</option>
+        </select>
+      </label>
+      <label>
+        Período:
+        <select id="periodo">
+          <option>Últimos 10 jogos</option>
+          <option>Últimos 20 jogos</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="graficos">
+      <div class="grafico">
+        <h3>Over 2.5</h3>
+        <p class="percentual">72%</p>
+      </div>
+      <div class="grafico">
+        <h3>BTTS</h3>
+        <p class="percentual">68%</p>
+      </div>
+      <div class="grafico">
+        <h3>Under 2.5</h3>
+        <p class="percentual">30%</p>
+      </div>
+    </section>
+
+    <section class="tabela">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Times</th>
+            <th>Resultado</th>
+            <th>Over 2.5</th>
+            <th>Ambos Marcam</th>
+            <th>Observações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>27/07/2025</td>
+            <td>Team A vs B</td>
+            <td>3–1</td>
+            <td>Sim</td>
+            <td>Sim</td>
+            <td>Confirmou padrão Over</td>
+          </tr>
+          <tr>
+            <td>26/07/2025</td>
+            <td>Team C vs D</td>
+            <td>1–0</td>
+            <td>Não</td>
+            <td>Não</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+  </html>
